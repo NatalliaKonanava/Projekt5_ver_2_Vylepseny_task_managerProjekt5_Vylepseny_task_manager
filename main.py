@@ -11,9 +11,9 @@ def pridat_ukol():
     popis = input("Zadej popis úkolu: ").strip()
     try:
         pridat_ukol_db(nazev, popis)
-        print("✅ Úkol byl úspěšně přidán.")
+        print("Úkol byl úspěšně přidán.")
     except ValueError as e:
-        print(f"❌ Chyba: {e}")
+        print(f"Chyba: {e}")
 
 
 def hlavni_menu():
@@ -32,15 +32,15 @@ def hlavni_menu():
             id_ukolu = input("Zadej ID úkolu: ").strip()
             stav = input("Zadej nový stav (Probíhá/Hotovo): ").strip()
             if aktualizovat_ukol_db(id_ukolu, stav):
-                print("✅ Úkol byl aktualizován.")
+                print("Úkol byl aktualizován.")
             else:
-                print("❌ Úkol s tímto ID neexistuje.")
+                print("Úkol s tímto ID neexistuje.")
         elif volba == "3":
             id_ukolu = input("Zadej ID úkolu: ").strip()
             if odstranit_ukol_db(id_ukolu):
-                print("✅ Úkol byl odstraněn.")
+                print("Úkol byl odstraněn.")
             else:
-                print("❌ Úkol s tímto ID neexistuje.")
+                print("Úkol s tímto ID neexistuje.")
         elif volba == "4":
             print("Ukončuji program.")
             break
@@ -50,3 +50,4 @@ def hlavni_menu():
 
 if __name__ == "__main__":
     hlavni_menu()
+
